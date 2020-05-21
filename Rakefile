@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'rspec/core/rake_task'
 require 'fileutils'
 
 DISTRIBUTIONS = [
@@ -23,7 +24,7 @@ task :build do
     FileUtils.rm_rf('vendor')
     FileUtils.mkdir('vendor')
 
-    url = "https://get.helm.sh/helm-v#{HelmRb::VERSION}-#{distro[:filename]}"
+    url = "https://get.helm.sh/helm-v#{HelmRb::HELM_VERSION}-#{distro[:filename]}"
     ext = distro[:filename][distro[:filename].index('.')..-1]
     distro_name = distro[:filename].chomp(ext)
     archive = "helm#{ext}"
@@ -44,4 +45,11 @@ task :build do
     package = Gem::Package.build(gemspec)
     FileUtils.mv(package, 'pkg')
   end
+end
+
+task default: :spec
+
+desc 'Run specs'
+RSpec::Core::RakeTask.new do |t|
+  t.pattern = './spec/**/*_spec.rb'
 end

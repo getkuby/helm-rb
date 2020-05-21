@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version  = ::HelmRb::VERSION
   s.authors  = ['Cameron Dutro']
   s.email    = ['camertron@gmail.com']
-  s.homepage = 'http://github.com/camertron/helm-rb'
+  s.homepage = 'http://github.com/getkuby/helm-rb'
   s.license  = 'Apache-2.0'
 
   s.description = s.summary = 'Helm distributed as a Rubygem.'

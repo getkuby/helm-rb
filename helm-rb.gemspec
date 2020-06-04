@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
 
   s.require_path = 'lib'
-  s.files = Dir['{lib,spec,vendor}/**/*', 'Gemfile', 'CHANGELOG.md', 'README.md', 'Rakefile', 'helm-rb.gemspec']
+  s.files = Dir['{lib,spec,vendor}/**/*', 'Gemfile', 'LICENSE', 'CHANGELOG.md', 'README.md', 'Rakefile', 'helm-rb.gemspec']
 end

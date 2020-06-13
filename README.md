@@ -15,7 +15,7 @@ There is only one method that returns the absolute path to the helm executable:
 ```ruby
 require 'helm-rb'
 
-# /Users/cameron/.rbenv/versions/2.5.6/lib/ruby/gems/2.5.0/gems/helm-rb-0.1.0-x86_64-darwin/vendor/helm
+# /Users/me/.rbenv/versions/2.5.6/lib/ruby/gems/2.5.0/gems/helm-rb-0.1.0-x86_64-darwin/vendor/helm
 HelmRb.executable
 ```
 

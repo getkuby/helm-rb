@@ -8,7 +8,7 @@ DISTRIBUTIONS = [
   { rb_platform: 'x86_64-linux',  filename: 'linux-amd64.tar.gz' },
   { rb_platform: 'arm-linux',     filename: 'linux-arm.tar.gz' },
   { rb_platform: 'arm64-linux',   filename: 'linux-arm64.tar.gz' },
-  { rb_platform: 'i386-linux',    filename: 'linux-386.tar.gz' },
+  { rb_platform: 'x86-linux',     filename: 'linux-386.tar.gz' },
   { rb_platform: 'ppc64le-linux', filename: 'linux-ppc64le.tar.gz' },
   { rb_platform: 's390x-linux',   filename: 'linux-s390x.tar.gz' },
   { rb_platform: 'x64-mswin64',   filename: 'windows-amd64.zip' }
@@ -45,6 +45,13 @@ task :build do
     gemspec.platform = distro[:rb_platform]
     package = Gem::Package.build(gemspec)
     FileUtils.mv(package, 'pkg')
+  end
+end
+
+task :publish do
+  DISTRIBUTIONS.each do |distro|
+    package_file = File.join('pkg', "helm-rb-#{HelmRb::VERSION}-#{distro[:rb_platform]}.gem")
+    system "gem push #{package_file}"
   end
 end
 

@@ -3,15 +3,16 @@ require 'rspec/core/rake_task'
 require 'fileutils'
 
 DISTRIBUTIONS = [
-  { rb_platform: 'x86_64-darwin', filename: 'darwin-amd64.tar.gz' },
-  { rb_platform: 'arm64-darwin',  filename: 'darwin-arm64.tar.gz'},
-  { rb_platform: 'x86_64-linux',  filename: 'linux-amd64.tar.gz' },
-  { rb_platform: 'arm-linux',     filename: 'linux-arm.tar.gz' },
-  { rb_platform: 'arm64-linux',   filename: 'linux-arm64.tar.gz' },
-  { rb_platform: 'x86-linux',     filename: 'linux-386.tar.gz' },
-  { rb_platform: 'ppc64le-linux', filename: 'linux-ppc64le.tar.gz' },
-  { rb_platform: 's390x-linux',   filename: 'linux-s390x.tar.gz' },
-  { rb_platform: 'x64-mswin64',   filename: 'windows-amd64.zip' }
+  { rb_platform: 'aarch64-linux-musl', filename: 'aarch64-linux-musl.zip' },
+  { rb_platform: 'x86_64-darwin',      filename: 'darwin-amd64.tar.gz' },
+  { rb_platform: 'arm64-darwin',       filename: 'darwin-arm64.tar.gz'},
+  { rb_platform: 'x86_64-linux',       filename: 'linux-amd64.tar.gz' },
+  { rb_platform: 'arm-linux',          filename: 'linux-arm.tar.gz' },
+  { rb_platform: 'arm64-linux',        filename: 'linux-arm64.tar.gz' },
+  { rb_platform: 'x86-linux',          filename: 'linux-386.tar.gz' },
+  { rb_platform: 'ppc64le-linux',      filename: 'linux-ppc64le.tar.gz' },
+  { rb_platform: 's390x-linux',        filename: 'linux-s390x.tar.gz' },
+  { rb_platform: 'x64-mswin64',        filename: 'windows-amd64.zip' },
 ]
 
 task :build do

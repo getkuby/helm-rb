@@ -8,6 +8,7 @@ DISTRIBUTIONS = [
   { rb_platform: 'x86_64-linux',  filename: 'linux-amd64.tar.gz' },
   { rb_platform: 'arm-linux',     filename: 'linux-arm.tar.gz' },
   { rb_platform: 'arm64-linux',   filename: 'linux-arm64.tar.gz' },
+  { rb_platform: 'aarch64-linux', filename: 'linux-arm64.tar.gz' },
   { rb_platform: 'x86-linux',     filename: 'linux-386.tar.gz' },
   { rb_platform: 'ppc64le-linux', filename: 'linux-ppc64le.tar.gz' },
   { rb_platform: 's390x-linux',   filename: 'linux-s390x.tar.gz' },

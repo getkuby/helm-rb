@@ -37,6 +37,7 @@ task :build do
 
     Dir.glob(File.join('helm', distro_name, 'helm*')).each do |exe|
       system("chmod +x #{exe}")
+      File.chmod(0755, exe)
       FileUtils.cp(exe, 'vendor')
     end
 

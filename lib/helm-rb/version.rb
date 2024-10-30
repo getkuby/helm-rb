@@ -1,4 +1,4 @@
 module HelmRb
-  VERSION = '0.2.1'
-  HELM_VERSION = '3.6.2'
+  VERSION = '0.3.0'
+  HELM_VERSION = '3.16.2'
 end

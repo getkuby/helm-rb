@@ -1,3 +1,6 @@
+## 0.3.0
+* Upgrade to Helm 3.16.
+
 ## 0.2.1
 * Fix file permissions for the Helm executable.
 
